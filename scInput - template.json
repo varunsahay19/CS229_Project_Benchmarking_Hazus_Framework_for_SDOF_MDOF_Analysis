@@ -1,0 +1,281 @@
+{
+    "Applications": {
+        "DL": {
+            "Application": "Pelicun3",
+            "ApplicationData": {
+            }
+        },
+        "EDP": {
+            "Application": "StandardEarthquakeEDP",
+            "ApplicationData": {
+            }
+        },
+        "Events": [
+            {
+                "Application": "ExistingPEER_Events",
+                "ApplicationData": {
+                },
+                "EventClassification": "Earthquake"
+            }
+        ],
+        "Modeling": {
+            "Application": "MDOF_BuildingModel",
+            "ApplicationData": {
+            }
+        },
+        "Performance": {
+            "Application": "None",
+            "ApplicationData": {
+            }
+        },
+        "Simulation": {
+            "Application": "CapacitySpectrumMethod2",
+            "ApplicationData": {
+                "CapacityModel": {
+                    "Name": "HAZUS_cao_peterson_2006",
+                    "Parameters": {
+                    }
+                },
+                "DampingModel": {
+                    "Name": "HAZUS_cao_peterson_2006",
+                    "Parameters": {
+                    }
+                },
+                "DemandModel": {
+                    "Name": "HAZUS",
+                    "Parameters": {
+                        "EarthquakeMagnitude": 8
+                    }
+                },
+                "regionalUse": false
+            }
+        },
+        "UQ": {
+            "Application": "Dakota-UQ",
+            "ApplicationData": {
+            }
+        }
+    },
+    "DL": {
+        "Asset": {
+            "ComponentAssignmentFile": "C:/Users/varun/OneDrive - Stanford/Desktop/Stanford/5. Autumn 25 Quarter/Independent Study CEE299/PBE_Analysis/From_GUI/tmp.SimCenter/templatedir/CMP_QNT.csv",
+            "ComponentDatabase": "Hazus Earthquake - Buildings",
+            "NumberOfStories": "3",
+            "OccupancyType": "EDU2",
+            "PlanArea": "50000"
+        },
+        "Damage": {
+            "DamageProcess": "Hazus Earthquake - Buildings"
+        },
+        "Demands": {
+            "CoupledDemands": true,
+            "SampleSize": "10000"
+        },
+        "Losses": {
+            "Repair": {
+                "ConsequenceDatabase": "Hazus Earthquake - Buildings",
+                "DecisionVariables": {
+                    "Carbon": false,
+                    "Cost": true,
+                    "Energy": false,
+                    "Time": true
+                },
+                "MapApproach": "Automatic",
+                "ReplacementCost": {
+                    "Median": "1",
+                    "Unit": "loss_ratio"
+                },
+                "ReplacementTime": {
+                    "Median": "180",
+                    "Unit": "day"
+                }
+            }
+        },
+        "Outputs": {
+            "Asset": {
+                "Sample": true,
+                "Statistics": true
+            },
+            "Damage": {
+                "GroupedSample": true,
+                "GroupedStatistics": true,
+                "Sample": true,
+                "Statistics": true
+            },
+            "Demand": {
+                "Sample": true,
+                "Statistics": true
+            },
+            "Format": {
+                "CSV": true,
+                "JSON": false
+            },
+            "Loss": {
+                "Repair": {
+                    "AggregateSample": true,
+                    "AggregateStatistics": true,
+                    "GroupedSample": true,
+                    "GroupedStatistics": true,
+                    "Sample": true,
+                    "Statistics": true
+                }
+            }
+        }
+    },
+    "DefaultValues": {
+        "driverFile": "driver",
+        "edpFiles": [
+            "EDP.json"
+        ],
+        "filenameAIM": "AIM.json",
+        "filenameDL": "AIM.json",
+        "filenameEDP": "EDP.json",
+        "filenameEVENT": "EVENT.json",
+        "filenameSAM": "SAM.json",
+        "filenameSIM": "SIM.json",
+        "rvFiles": [
+            "AIM.json",
+            "SAM.json",
+            "EVENT.json",
+            "SIM.json"
+        ],
+        "workflowInput": "scInput.json",
+        "workflowOutput": "EDP.json"
+    },
+    "EDP": {
+    },
+    "Events": [
+        {
+            "EventClassification": "Earthquake",
+            "Events": [
+                {
+                    "EventClassification": "Earthquake",
+                    "Records": [
+                        {
+                            "dirn": 1,
+                            "factor": 1,
+                            "fileName": "RSN1714_NORTH392_W70000.AT2",
+                            "filePath": "C:/Users/varun/Downloads"
+                        }
+                    ],
+                    "name": "1714",
+                    "type": "PeerEvent"
+                }
+            ],
+            "type": "ExistingPEER_Events"
+        }
+    ],
+    "GeneralInformation": {
+        "DesignLevel": "High-Code",
+        "NumberOfStories": 3,
+        "PlanArea": 50000,
+        "StructureType": "C2",
+        "YearBuilt": 1990,
+        "depth": 316.227,
+        "height": 45.9999,
+        "location": {
+            "latitude": 37.426,
+            "longitude": -122.171
+        },
+        "name": "C2_HC_475",
+        "planArea": 50000,
+        "stories": 3,
+        "units": {
+            "force": "kips",
+            "length": "ft",
+            "temperature": "C",
+            "time": "sec"
+        },
+        "width": 158.114
+    },
+    "Modeling": {
+        "Bx": 0.1,
+        "By": 0.1,
+        "Fyx": 1000000,
+        "Fyy": 1000000,
+        "Krz": 10000000000,
+        "Kx": 100,
+        "Ky": 100,
+        "ModelData": [
+            {
+                "Fyx": 1000000,
+                "Fyy": 1000000,
+                "Ktheta": 10000000000,
+                "bx": 0.1,
+                "by": 0.1,
+                "height": 15.3333,
+                "kx": 100,
+                "ky": 100,
+                "weight": 144
+            },
+            {
+                "Fyx": 1000000,
+                "Fyy": 1000000,
+                "Ktheta": 10000000000,
+                "bx": 0.1,
+                "by": 0.1,
+                "height": 15.3333,
+                "kx": 100,
+                "ky": 100,
+                "weight": 144
+            },
+            {
+                "Fyx": 1000000,
+                "Fyy": 1000000,
+                "Ktheta": 10000000000,
+                "bx": 0.1,
+                "by": 0.1,
+                "height": 15.3333,
+                "kx": 100,
+                "ky": 100,
+                "weight": 144
+            }
+        ],
+        "dampingRatio": 0.02,
+        "height": 15.3333,
+        "massX": 0,
+        "massY": 0,
+        "numStories": 3,
+        "randomVar": [
+        ],
+        "responseX": 0,
+        "responseY": 0,
+        "type": "MDOF_BuildingModel",
+        "weight": 144
+    },
+    "Performance": {
+    },
+    "Simulation": {
+    },
+    "UQ": {
+        "parallelExecution": true,
+        "samplingMethodData": {
+            "method": "LHS",
+            "samples": 1,
+            "seed": 867
+        },
+        "saveWorkDir": true,
+        "uqType": "Forward Propagation"
+    },
+    "WorkflowType": "Building Simulation",
+    "correlationMatrix": [
+        1
+    ],
+    "localAppDir": "C:/Users/varun/Downloads/PBE_Windows_Download/PBE_Windows_Download",
+    "randomVariables": [
+        {
+            "distribution": "Normal",
+            "inputType": "Parameters",
+            "mean": 0,
+            "name": "rv",
+            "refCount": 0,
+            "stdDev": 1,
+            "value": "RV.rv",
+            "variableClass": "Uncertain"
+        }
+    ],
+    "remoteAppDir": "C:/Users/varun/Downloads/PBE_Windows_Download/PBE_Windows_Download",
+    "runDir": "C:/Users/varun/OneDrive - Stanford/Desktop/Stanford/5. Autumn 25 Quarter/Independent Study CEE299/PBE_Analysis/From_GUI/tmp.SimCenter",
+    "runType": "runningLocal",
+    "workingDir": "C:/Users/varun/OneDrive - Stanford/Desktop/Stanford/5. Autumn 25 Quarter/Independent Study CEE299/PBE_Analysis/From_GUI"
+}
